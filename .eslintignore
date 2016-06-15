@@ -1,0 +1,6 @@
+# Tests
+**/*.test.*.js
+**/*.test.*.jsx
+
+# Dummy router
+src/services/dummy-router.js

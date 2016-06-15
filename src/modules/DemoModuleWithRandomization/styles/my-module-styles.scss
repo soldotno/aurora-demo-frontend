@@ -1,0 +1,23 @@
+.awesome {
+  background-color: whitesmoke;
+
+  &.one {
+    color: yellow
+  }
+
+  &.two {
+    color: red
+  }
+
+  &.three {
+    color: blue
+  }
+
+  &.four {
+    color: hotpink
+  }
+
+  &.five {
+    color: cyan
+  }
+}
