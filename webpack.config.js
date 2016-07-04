@@ -4,6 +4,7 @@
 const auroraWebpackConfig = require('aurora-core/webpack.config.js');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 /**
  * Environment
@@ -23,9 +24,13 @@ module.exports = Object.assign({}, auroraWebpackConfig, {
   /**
    * Extend the plugin array
    */
-  plugins: !isProduction ? (auroraWebpackConfig.plugins || []).concat([
-    new ProgressBarPlugin(),
-  ]) : (auroraWebpackConfig.plugins || []),
+  plugins: auroraWebpackConfig.plugins.concat([
+    new webpack.DefinePlugin({
+      '__DEVELOPMENT__': JSON.stringify(!isProduction),
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      'process.env.API_URL': JSON.stringify(process.env.API_URL),
+    }),
+  ]),
   /**
    * Extend the output to make it work with the dev-server
    */
