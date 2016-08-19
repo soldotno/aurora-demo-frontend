@@ -68,7 +68,7 @@
     "progress-bar-webpack-plugin": "^1.3.0",
     "qs": "^6.1.0",
     "query-string": "^4.2.2",
-    "react": "^15.2.0",
+    "react": "^15.2.1",
     "react-dom": "^15.2.0",
     "react-hot-loader": "^1.3.0",
     "react-redux": "^4.0.6",
