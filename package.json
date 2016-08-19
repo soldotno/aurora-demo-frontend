@@ -31,7 +31,7 @@
   "dependencies": {
     "aurora-core": "soldotno/aurora-core.git#master",
     "aurora-sass-loader": "soldotno/aurora-sass-loader.git#master",
-    "autoprefixer": "^6.3.3",
+    "autoprefixer": "^6.4.0",
     "axios": "^0.12.0",
     "babel": "^6.0.15",
     "babel-cli": "^6.5.1",
