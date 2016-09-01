@@ -76,7 +76,7 @@
     "redux": "^3.0.5",
     "redux-logger": "^2.2.1",
     "redux-thunk": "^2.1.0",
-    "sass-loader": "^4.0.0",
+    "sass-loader": "^4.0.1",
     "serve-favicon": "^2.3.0",
     "stringify-clone": "^1.1.1",
     "style-loader": "^0.13.0",
