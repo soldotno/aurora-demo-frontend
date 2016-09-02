@@ -53,7 +53,7 @@
     "express-useragent": "^0.2.4",
     "is-client": "0.0.2",
     "isomorphic-ensure": "^1.0.1",
-    "js-cookie": "^2.1.0",
+    "js-cookie": "^2.1.3",
     "location-bar": "^2.1.0",
     "lodash": "^4.13.1",
     "lodash.compose": "^2.4.1",
