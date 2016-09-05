@@ -46,7 +46,7 @@
     "classnames": "^2.2.0",
     "compression": "^1.6.0",
     "cookie-parser": "1.4.3",
-    "css-loader": "^0.23.1",
+    "css-loader": "^0.25.0",
     "debug": "^2.2.0",
     "es5-shim": "^4.3.0",
     "express": "^4.13.3",
