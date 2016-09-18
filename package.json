@@ -82,7 +82,7 @@
     "style-loader": "^0.13.0",
     "url-join": "1.1.0",
     "url-parse": "^1.0.5",
-    "uuid": "^2.0.1",
+    "uuid": "^2.0.3",
     "uuid-validate": "0.0.2",
     "webpack": "^1.12.13"
   },
