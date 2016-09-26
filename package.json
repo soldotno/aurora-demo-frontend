@@ -55,7 +55,7 @@
     "isomorphic-ensure": "^1.0.1",
     "js-cookie": "^2.1.0",
     "location-bar": "^2.1.0",
-    "lodash": "^4.13.1",
+    "lodash": "^4.16.2",
     "lodash.compose": "^2.4.1",
     "lodash.set": "^4.0.0",
     "md5": "^2.0.0",
