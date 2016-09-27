@@ -50,7 +50,7 @@
     "debug": "^2.2.0",
     "es5-shim": "^4.3.0",
     "express": "^4.13.3",
-    "express-useragent": "^0.2.4",
+    "express-useragent": "^1.0.4",
     "is-client": "0.0.2",
     "isomorphic-ensure": "^1.0.1",
     "js-cookie": "^2.1.0",
