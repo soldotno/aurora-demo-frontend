@@ -99,7 +99,7 @@
     "karma-mocha-reporter": "^2.0.4",
     "karma-sourcemap-loader": "^0.3.6",
     "karma-webpack": "^1.7.0",
-    "mocha": "^2.5.3",
+    "mocha": "^3.1.0",
     "mockery": "^1.4.0",
     "webpack-dev-server": "^1.14.1"
   }
