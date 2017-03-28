@@ -10,11 +10,11 @@ Demo implementation of a frontend conforming to [aurora-core](https://github.com
 #### Development shellscript example:
 ```sh
 #!/bin/sh
-export PORT=3000 \
-export HOSTNAME="localhost" \
-export DEBUG="*,-babel" \
-export NODE_ENV="development" \
-export API_URL="http://localhost:3001" \
+export PORT=3000
+export HOSTNAME="localhost"
+export DEBUG="*,-babel"
+export NODE_ENV="development"
+export API_URL="http://localhost:3001"
 
 npm run develop
 ```
@@ -22,11 +22,11 @@ npm run develop
 #### Production shellscript example:
 ```sh
 #!/bin/sh
-export PORT=3000 \
-export HOSTNAME="localhost" \
-export DEBUG="*,-babel" \
-export NODE_ENV="production" \
-export API_URL="http://localhost:3001" \
+export PORT=3000
+export HOSTNAME="localhost"
+export DEBUG="*,-babel"
+export NODE_ENV="production"
+export API_URL="http://localhost:3001"
 
 npm run build && npm start
 ```

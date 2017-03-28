@@ -16,11 +16,17 @@ const isProduction = process.env.NODE_ENV === 'production';
  */
 module.exports = Object.assign({}, auroraWebpackConfig, {
   /**
+   * Source maps
+   */
+  devtool: isProduction ? 'cheap-source-map' : 'cheap-module-source-map',
+
+  /**
    * Replace the entry file name
    */
   entry: auroraWebpackConfig.entry.slice().reverse().slice(1).reverse().concat([
     './src/client-bootstrap'
   ]),
+
   /**
    * Extend the plugin array
    */
@@ -31,12 +37,15 @@ module.exports = Object.assign({}, auroraWebpackConfig, {
       'process.env.API_URL': JSON.stringify(process.env.API_URL),
     }),
   ]),
+
   /**
    * Extend the output to make it work with the dev-server
    */
-  output: !isProduction ? Object.assign({}, auroraWebpackConfig.output, {
+  output: Object.assign({}, auroraWebpackConfig.output, {
     path: path.join(__dirname, '/public/static/'),
-  }) : auroraWebpackConfig.output,
+    publicPath: '/static/',
+  }),
+
   /**
    * Add resolver aliases that
    * we want to ignore in our
@@ -46,6 +55,7 @@ module.exports = Object.assign({}, auroraWebpackConfig, {
    * server specific modules
    * with a no-op (from npm)
    */
+
   resolve: Object.assign({}, auroraWebpackConfig.resolve, {
     alias: Object.assign({}, (auroraWebpackConfig.resolve || {}).alias, {
       'redis': 'no-op'
