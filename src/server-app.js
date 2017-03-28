@@ -14,6 +14,10 @@ const ms = require('ms');
  * from aurora core and create an instance
  */
 const renderServer = require('aurora-core/dist/render/server')({
+  cacheHTML: {
+    get: () => Promise.reject(new Error('Cache miss')),
+    set: function(){},
+  },
   createHTML: require('./utils/create-html'),
   getRoute: require('./services/get-route-config'),
   getUserSettings: require('./utils/get-user-settings'),
