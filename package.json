@@ -32,7 +32,7 @@
     "aurora-core": "2.0.2",
     "aurora-sass-loader": "github:soldotno/aurora-sass-loader#master",
     "autoprefixer": "6.7.7",
-    "axios": "0.16.0",
+    "axios": "0.16.1",
     "babel": "6.0.15",
     "babel-cli": "6.24.0",
     "babel-core": "6.24.0",
