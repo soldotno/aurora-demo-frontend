@@ -4,7 +4,7 @@
  * Get the current geolocation
  * of a user (browser)
  */
-module.exports = function() {
+module.exports = function getGeoLocation() {
   /**
    * Check if the geolocation API exists
    * (if it doesn't we default to a pre-set value)
@@ -15,7 +15,7 @@ module.exports = function() {
   ) {
     return Promise.resolve({
       coords: { latitude: 0, longitude: 0 },
-      timestamp: Date.now()
+      timestamp: Date.now(),
     });
   }
 
@@ -27,7 +27,7 @@ module.exports = function() {
     navigator.geolocation.getCurrentPosition(resolve, () => {
       resolve({
         coords: { latitude: 0, longitude: 0 },
-        timestamp: Date.now()
+        timestamp: Date.now(),
       });
     }, {
       maximumAge: 30000,

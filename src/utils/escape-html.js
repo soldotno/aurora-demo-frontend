@@ -3,6 +3,6 @@
  *
  * TODO: This should be done somewhere else preferably! (In the API - or whoever delivers it)
  */
-module.exports = function(configString) {
+module.exports = function escapeHtml(configString) {
   return configString.replace(/<\/script>/gi, '<\\/script>');
 };
