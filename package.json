@@ -80,7 +80,7 @@
     "serve-favicon": "2.4.2",
     "stringify-clone": "2.0.0",
     "style-loader": "0.16.1",
-    "url-join": "1.1.0",
+    "url-join": "2.0.1",
     "url-parse": "1.1.8",
     "uuid": "3.0.1",
     "uuid-validate": "0.0.2",
