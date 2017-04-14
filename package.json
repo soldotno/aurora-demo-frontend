@@ -84,7 +84,7 @@
     "url-parse": "1.1.8",
     "uuid": "3.0.1",
     "uuid-validate": "0.0.2",
-    "webpack": "2.3.3"
+    "webpack": "2.4.1"
   },
   "devDependencies": {
     "eslint": "3.19.0",
