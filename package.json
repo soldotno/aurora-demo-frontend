@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/soldotno/aurora-demo-frontend",
   "dependencies": {
-    "aurora-core": "2.0.2",
+    "aurora-core": "2.1.0",
     "aurora-sass-loader": "github:soldotno/aurora-sass-loader#master",
     "autoprefixer": "6.7.7",
     "axios": "0.16.0",
