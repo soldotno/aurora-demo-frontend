@@ -5,11 +5,16 @@ const auroraWebpackConfig = require('aurora-core/webpack.config.js');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const {
+  apiUrl,
+  hostname,
+  nodeEnv,
+} = require('./config');
 
 /**
  * Environment
  */
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = nodeEnv === 'production';
 
 /**
  * Export a webpack plugin that extends the one from aurora-core
@@ -23,8 +28,9 @@ module.exports = Object.assign({}, auroraWebpackConfig, {
   /**
    * Replace the entry file name
    */
-  entry: auroraWebpackConfig.entry.slice().reverse().slice(1).reverse().concat([
-    './src/client-bootstrap'
+  entry: auroraWebpackConfig.entry.slice().reverse().slice(1).reverse()
+  .concat([
+    './src/client-bootstrap',
   ]),
 
   /**
@@ -33,8 +39,9 @@ module.exports = Object.assign({}, auroraWebpackConfig, {
   plugins: auroraWebpackConfig.plugins.concat([
     new webpack.DefinePlugin({
       '__DEVELOPMENT__': JSON.stringify(!isProduction),
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-      'process.env.API_URL': JSON.stringify(process.env.API_URL),
+      'process.env.NODE_ENV': JSON.stringify(nodeEnv),
+      'process.env.API_URL': JSON.stringify(apiUrl),
+      'process.env.HOSTNAME': JSON.stringify(hostname),
     }),
   ]),
 
@@ -58,7 +65,7 @@ module.exports = Object.assign({}, auroraWebpackConfig, {
 
   resolve: Object.assign({}, auroraWebpackConfig.resolve, {
     alias: Object.assign({}, (auroraWebpackConfig.resolve || {}).alias, {
-      'redis': 'no-op'
-    })
+      redis: 'no-op',
+    }),
   }),
 });

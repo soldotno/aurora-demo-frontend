@@ -7,7 +7,7 @@ const getDeviceId = require('./get-device-id');
  * Export a function that returns the user settings
  * we want to include in our application
  */
-module.exports = function (req, res) {
+module.exports = function getUserSettings(req, res) {
   /**
    * Create some global settings
    *
