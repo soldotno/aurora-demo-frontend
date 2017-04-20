@@ -7,17 +7,17 @@ const urlJoin = require('url-join');
 /**
  * Environment
  */
-const apiUrl = process.env.API_URL;
+const { apiUrl } = require('../../../../config');
 
 /**
  * Export a function that returns
  * a Promise of the data needed for
  * the module.
  */
-module.exports = function(options) {
+module.exports = function getRandomizedData(options) {
   return request
     .get(urlJoin(apiUrl, 'data', 'randomized-data'), {
-      params: options
+      params: options,
     })
     .then(response => response.data)
     .catch((error) => {
