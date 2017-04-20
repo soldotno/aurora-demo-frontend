@@ -13,7 +13,7 @@ const VersionAlert = React.createClass({
   getInitialState() {
     return {
       loaded: false,
-      href: null
+      href: null,
     };
   },
 
@@ -21,9 +21,13 @@ const VersionAlert = React.createClass({
    * Initialize on mount
    */
   componentDidMount() {
+    this.flagLoaded();
+  },
+
+  flagLoaded() {
     this.setState({
       loaded: true,
-      href: window.location.origin + (window.location.pathname || '')
+      href: window.location.origin + (window.location.pathname || ''),
     });
   },
 
@@ -65,7 +69,7 @@ const VersionAlert = React.createClass({
         <a href={href}>Klikk her for å laste</a>
       </div>
     );
-  }
+  },
 });
 
 /**

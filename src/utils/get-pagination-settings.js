@@ -3,7 +3,7 @@
  * default pagination settings with
  * user defined ones
  */
-module.exports = function (req) {
+module.exports = function getPaginationSettings(req) {
   /**
    * Set user defined pagination settings
    */
