@@ -1,10 +1,13 @@
 Aurora Core Frontend Demo
 =========================
 
-Demo implementation of a frontend conforming to [aurora-core](https://github.com/soldotno/aurora-core) specifications.
+Demo implementation of a frontend conforming to [Aurora](https://github.com/soldotno/aurora-core) specifications.
+
+Uses the Aurora application assembly framework provided by [aurora-core](https://github.com/soldotno/aurora-core) to render a frontend application as specified by an [Aurora api](https://github.com/soldotno/aurora-demo-api).
+
 
 #### Install dependencies
-* [Install node.js (5.x)](https://nodejs.org/)
+* [Install node.js (7.9.0)](https://nodejs.org/)
 * `npm install`
 
 #### Development shellscript example:
