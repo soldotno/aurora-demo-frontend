@@ -1,6 +1,6 @@
 {
   "name": "aurora-demo-frontend",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "SOL frontpage frontend application",
   "main": "app.js",
   "engines": {
