@@ -10,13 +10,19 @@ const useragent = require('express-useragent');
 const ms = require('ms');
 
 /**
+ * Environment
+ */
+const { port } = require('../config');
+
+/**
  * Import the server-rendering function
  * from aurora core and create an instance
  */
+/* eslint-disable global-require */
 const renderServer = require('aurora-core/dist/render/server')({
   cacheHTML: {
     get: () => Promise.reject(new Error('Cache miss')),
-    set: function(){},
+    set: function set() {},
   },
   createHTML: require('./utils/create-html'),
   getRoute: require('./services/get-route-config'),
@@ -25,11 +31,7 @@ const renderServer = require('aurora-core/dist/render/server')({
   getModule: require('./modules/get-module'),
   isVisible: require('./utils/is-visible'),
 });
-
-/**
- * Environment
- */
-const PORT = process.env.PORT || 3000;
+/* eslint-enable global-require */
 
 /**
  * Create express app
@@ -70,4 +72,4 @@ app.use('/', renderServer);
 /**
  * Start server
  */
-app.listen(PORT, () => console.log(`Listening on port ${PORT}`));  // eslint-disable-line no-console
+app.listen(port, () => console.log(`Listening on port ${port}`));  // eslint-disable-line no-console
