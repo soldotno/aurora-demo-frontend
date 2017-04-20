@@ -7,7 +7,7 @@ const escapeHtml = require('../utils/escape-html');
  * Export a function that creates
  * the initial HTML markup for the application
  */
-module.exports = function({
+module.exports = function createHtml({
   appMarkup = '<div>missing</div>',
   criticalStyles = '',
   pagination = {},
@@ -31,8 +31,7 @@ module.exports = function({
       ogDescription = '',
       ogSiteName = '',
       ogType = '',
-      lpUrl = '',
-    }
+    },
   } = config;
 
   /**

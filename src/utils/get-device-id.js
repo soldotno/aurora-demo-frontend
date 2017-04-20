@@ -32,7 +32,7 @@ function processClient() {
    */
   Cookie.set(cookieName, deviceId, {
     path: '/',
-    expires: new Date(Date.now() + cookieExpire)
+    expires: new Date(Date.now() + cookieExpire),
   });
 
   /**
@@ -60,7 +60,7 @@ function processServer(req, res) {
    */
   res.cookie(cookieName, deviceId, {
     path: '/',
-    expires: new Date(Date.now() + cookieExpire)
+    expires: new Date(Date.now() + cookieExpire),
   });
 
   /**
@@ -72,6 +72,6 @@ function processServer(req, res) {
 /**
  * Create or retrieve the deviceID and its cookie, either on the server or client side.
  */
-module.exports = function (req, res) {
+module.exports = function getDeviceId(req, res) {
   return (!req && !res && window) ? processClient() : processServer(req, res);
 };
