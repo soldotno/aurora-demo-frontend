@@ -7,21 +7,21 @@ const urlJoin = require('url-join');
 /**
  * Environment
  */
-const apiUrl = process.env.API_URL;
+const { apiUrl } = require('../../../../config');
 
 /**
  * Export a function that returns
  * a Promise of the data needed for
  * the module.
  */
-module.exports = function(options) {
+module.exports = function getGeoLocatedData(options) {
   /**
    * Feature detect the Geolocation API
    * (NOTE: this only works client-side!)
    */
   if (
     typeof navigator === 'undefined' &&
-    !(geolocation in navigator)
+    !(geolocation in navigator) // eslint-disable-line no-undef
   ) {
     return Promise.reject(new Error('Need browser to perform geolocation'));
   }
@@ -51,9 +51,9 @@ module.exports = function(options) {
       params: Object.assign({}, options, {
         __latitude: latitude,
         __longitude: longitude,
-      })
+      }),
     })
-    .then(response => response.data)
+    .then(response => response.data);
   })
   .catch((error) => {
     console.error(error);
