@@ -1,6 +1,8 @@
 Aurora Core Frontend Demo
 =========================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/soldotno/aurora-demo-frontend.svg)](https://greenkeeper.io/)
+
 Demo implementation of a frontend conforming to [aurora-core](https://github.com/soldotno/aurora-core) specifications.
 
 #### Install dependencies
