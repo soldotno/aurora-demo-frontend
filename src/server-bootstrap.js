@@ -3,11 +3,13 @@
  */
 require('babel-polyfill');
 
+const { nodeEnv } = require('../config');
+
 /**
  * Add a global var to conform
  * to webpack config
  */
-global.__DEVELOPMENT__ = process.env.NODE_ENV !== 'production';
+global.__DEVELOPMENT__ = nodeEnv !== 'production'; // eslint-disable-line no-underscore-dangle
 
 /**
  * Run all requires in our server-side
@@ -15,7 +17,7 @@ global.__DEVELOPMENT__ = process.env.NODE_ENV !== 'production';
  * ES2015 everywhere
  */
 require('babel-core/register')({
-  sourceMap: !__DEVELOPMENT__
+  sourceMap: !__DEVELOPMENT__, // eslint-disable-line no-underscore-dangle, no-undef
 });
 
 /**
@@ -26,7 +28,7 @@ global.Promise = require('bluebird');
 /**
  * Handle unhandled promise rejections
  */
-process.on('unhandledRejection', function(error) {
+process.on('unhandledRejection', (error) => {
   throw error;
 });
 

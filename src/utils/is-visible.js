@@ -14,7 +14,7 @@
  *
  * ..returning either true or false
  */
-module.exports = function (
+module.exports = function isVisible(
   settings = {},
   query = {},
   visibility = {}
@@ -77,14 +77,14 @@ module.exports = function (
    * Handle includes (precedence)
    */
   if ((include || []).length) {
-    return !!~include.indexOf(size);
+    return !!~include.indexOf(size); // eslint-disable-line no-bitwise
   }
 
   /**
    * Handle excludes
    */
-  if ((exclude || []).length) {
-    return !~exclude.indexOf(size);
+  if ((exclude || []).length) {
+    return !~exclude.indexOf(size); // eslint-disable-line no-bitwise
   }
 
   /**

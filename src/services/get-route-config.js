@@ -30,7 +30,7 @@ const request = axios.create({
  * Export a function that fetches
  * a page config based on input parameters
  */
-module.exports = function ({
+module.exports = function getRouteConfig({
   path = '/',
   query = {},
   page = 0,
@@ -51,7 +51,7 @@ module.exports = function ({
       limit,
       version,
       settings,
-    }
+    },
   };
 
   /**
