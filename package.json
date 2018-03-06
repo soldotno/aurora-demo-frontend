@@ -60,7 +60,7 @@
     "lodash.compose": "2.4.1",
     "lodash.set": "4.3.2",
     "md5": "2.2.1",
-    "moment": "2.18.1",
+    "moment": "2.21.0",
     "ms": "1.0.0",
     "newrelic": "1.38.2",
     "no-op": "1.0.3",
